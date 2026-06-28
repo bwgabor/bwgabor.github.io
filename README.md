@@ -47,7 +47,7 @@ bwgabor.github.io/
 │   └── screenshot.png
 ├── CHANGELOG.md
 └── .github/
-└── workflows/ # CI/CD (later)
+    └── workflows/ # CI/CD (later)
 ```
 
 

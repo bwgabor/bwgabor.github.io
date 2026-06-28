@@ -40,9 +40,9 @@ bwgabor.github.io/
 ├── index.html # Main portfolio page
 ├── assets/
 │ ├── css/
-│ │ └── style.css # Custom overrides on top of Bootstrap
+│ │ └── style.css # Custom overrides on top of Bootstrap (later)
 │ ├── js/
-│ │ └── main.js # Minimal interaction (e.g. smooth scroll)
+│ │ └── main.js # Project load (later)
 │ └── img/
 │ └── screenshot.png
 ├── CHANGELOG.md

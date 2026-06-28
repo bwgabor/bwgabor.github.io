@@ -44,7 +44,7 @@ bwgabor.github.io/
 │ ├── js/
 │ │ └── main.js # Project load (later)
 │ └── img/
-│ └── screenshot.png
+│   └── screenshot.png
 ├── CHANGELOG.md
 └── .github/
 └── workflows/ # CI/CD (later)

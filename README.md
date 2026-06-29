@@ -51,6 +51,14 @@ bwgabor.github.io/
 ```
 
 
+## 🧪 Test
+
+| Category      | Goal  | Result     | Status  |
+| -------------- | ---- | ---------- | ------- |
+| Performance    | ≥ 90 | 90         | ✅     |
+| Accessibility  | ≥ 90 | 98         | ✅     |
+| Best Practices | ≥ 90 | 100        | ✅     |
+| SEO            | ≥ 90 | 100        | ✅     |
 ---
 
 ## 📋 Changelog

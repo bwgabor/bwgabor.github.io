@@ -39,12 +39,20 @@ start index.html       # Windows
 bwgabor.github.io/
 ├── index.html # Main portfolio page
 ├── assets/
-│ ├── css/
-│ │ └── style.css # Custom overrides on top of Bootstrap (later)
-│ ├── js/
-│ │ └── main.js # Project load (later)
-│ └── img/
-│   └── screenshot.png
+│   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   └── style.css # Custom overrides on top of Bootstrap
+│   ├── js/
+│   │   ├── bootstrap.bundle.js
+│   │   └── main.js # Project load (later)
+│   ├── fonts/
+│   │   ├── instrument-serif-v5-latin-italic.woff2
+│   │   ├── instrument-serif-v5-latin-regular.woff2
+│   │   ├── inter-v20-latin-300.woff2
+│   │   ├── inter-v20-latin-700.woff2
+│   │   └── inter-v20-latin-regular.woff2
+│   └── img/
+│       └── screenshot.png
 ├── CHANGELOG.md
 └── .github/
     └── workflows/ # CI/CD (later)

@@ -14,7 +14,7 @@ Personal portfolio site built with Bootstrap 5 and hosted on GitHub Pages.
 
 ## 🛠️ Technologies
 
-- [Bootstrap 5.3](https://getbootstrap.com/) – CSS framework (CDN)
+- [Bootstrap 5.3](https://getbootstrap.com/) – CSS framework
 - [GitHub Pages](https://pages.github.com/) – Static hosting
 - HTML5, CSS3, Vanilla JS
 

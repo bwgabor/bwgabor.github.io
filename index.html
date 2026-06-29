@@ -18,16 +18,26 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">Gábor Sziebert</a>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <!-- <li><button id="theme-toggle" class="btn btn-sm btn-outline-secondary" aria-label="Switch to dark mode"
-          title="Toggle light/dark mode">🌙</button></li> -->
-      </ul>
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="navbar-brand nav-logo" href="#top">Gábor Sziebert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav nav-links ms-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -167,6 +177,32 @@
 
   <!-- Bootstrap JS Bundle -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+      // Nav linkek kattintásakor navbar collapse bezárása
+        document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            const collapseEl = document.querySelector('.navbar-collapse');
+            const collapse = bootstrap.Collapse.getInstance(collapseEl);
+            if (collapse) collapse.hide();
+          });
+        });
+
+      // Scrollspy – aktív nav link frissítése
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              navLinks.forEach(l => l.classList.remove('active'));
+              const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+              if (active) active.classList.add('active');
+            }
+          });
+        }, { threshold: 0.4 });
+
+        sections.forEach(s => observer.observe(s));
+  </script>
 
 </body>
 

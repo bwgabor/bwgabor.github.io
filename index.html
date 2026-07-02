@@ -48,6 +48,43 @@
 }
   </script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W76F35N6G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4W76F35N6G');
+  </script>
+
+  <script>
+    // GitHub link click event tracking
+    document.querySelectorAll('a[href*="github.com"]').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'github_click', { event_category: 'engagement' });
+      });
+    });
+
+    // Projekt card click event tracking
+    document.querySelectorAll('.project-card').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'project_card_click', {
+          event_category: 'engagement',
+          event_label: el.querySelector('h3')?.textContent
+        });
+      });
+    });
+
+    // Contact link click event tracking
+    document.querySelectorAll('a[href^="mailto"]').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'contact_click', { event_category: 'engagement' });
+      });
+    });
+
+  </script>
+
 </head>
 
 <body>

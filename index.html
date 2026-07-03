@@ -60,33 +60,6 @@
     gtag('config', 'G-4W76F35N6G');
   </script>
 
-  <script>
-    // GitHub link click event tracking
-    document.querySelectorAll('a[href*="github.com"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'github_click', { event_category: 'engagement' });
-      });
-    });
-
-    // Projekt card click event tracking
-    document.querySelectorAll('.project-card').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'project_card_click', {
-          event_category: 'engagement',
-          event_label: el.querySelector('h3')?.textContent
-        });
-      });
-    });
-
-    // Contact link click event tracking
-    document.querySelectorAll('a[href^="mailto"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'contact_click', { event_category: 'engagement' });
-      });
-    });
-
-  </script>
-
 <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -261,7 +234,7 @@
   <!-- Bootstrap JS Bundle -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script>
-      // Nav linkek kattintásakor navbar collapse bezárása
+      // Closes the navbar collapse when a nav link is clicked (for mobile view)
         document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
           link.addEventListener('click', () => {
             const collapseEl = document.querySelector('.navbar-collapse');
@@ -270,7 +243,7 @@
           });
         });
 
-      // Scrollspy – aktív nav link frissítése
+      // Scrollspy functionality to update active nav link based on section in view
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
@@ -285,6 +258,33 @@
         }, { threshold: 0.4 });
 
         sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    // GitHub link click event tracking
+    document.querySelectorAll('a[href*="github.com"]').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'github_click', { event_category: 'engagement' });
+      });
+    });
+
+    // Projekt card click event tracking
+    document.querySelectorAll('.project-card').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'project_card_click', {
+          event_category: 'engagement',
+          event_label: el.querySelector('h3')?.textContent
+        });
+      });
+    });
+
+    // Contact link click event tracking
+    document.querySelectorAll('a[href^="mailto"]').forEach(el => {
+      el.addEventListener('click', () => {
+        gtag('event', 'contact_click', { event_category: 'engagement' });
+      });
+    });
+
   </script>
 
 </body>

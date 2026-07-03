@@ -258,30 +258,36 @@
   </script>
 
   <script>
-    // GitHub link click event tracking
-    document.querySelectorAll('a[href*="github.com"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'github_click', { event_category: 'engagement' });
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="github.com"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'github_click', {
+            event_category: 'engagement',
+            event_label: el.href
+          });
+        });
       });
-    });
 
-    // Projekt card click event tracking
-    document.querySelectorAll('.project-card').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'project_card_click', {
-          event_category: 'engagement',
-          event_label: el.querySelector('h3')?.textContent
+      document.querySelectorAll('.project-card').forEach(function (el) {
+        el.addEventListener('click', function () {
+          const projectName = el.querySelector('.project-name')?.textContent?.trim() || 'unknown_project';
+
+          gtag('event', 'project_card_click', {
+            event_category: 'engagement',
+            event_label: projectName
+          });
+        });
+      });
+
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'contact_click', {
+            event_category: 'engagement',
+            event_label: el.href
+          });
         });
       });
     });
-
-    // Contact link click event tracking
-    document.querySelectorAll('a[href^="mailto"]').forEach(el => {
-      el.addEventListener('click', () => {
-        gtag('event', 'contact_click', { event_category: 'engagement' });
-      });
-    });
-
   </script>
 
 </body>

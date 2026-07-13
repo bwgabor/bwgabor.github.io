@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu" data-bs-theme="light">
+
+<head>
+  <title>{{ title if title else "Gábor Sziebert · Portfolio, Projects, and Experience" }}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Systems Engineer, DevOps, and Workflow Automation. Portfolio, Projects, and Experience." />
+  <link rel="canonical" href="https://bwgabor.github.io/">
+
+  <meta name="google-site-verification" content="U5FadCEvyO8wjT_loMny51FcWQlAS7KLPt-C0CzivZU" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bwgabor.github.io/">
+  <meta property="og:title" content="Gábor Sziebert · Portfolio, Projects, and Experience">
+  <meta property="og:site_name" content="Gábor Sziebert · Portfolio, Projects, and Experience">
+  <meta property="og:description" content="IT Systems Engineer, DevOps, and Workflow Automation. Portfolio, Projects, and Experience.">
+  <meta property="og:image" content="https://bwgabor.github.io/assets/img/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gábor Sziebert · Portfolio, Projects, and Experience">
+  <meta name="twitter:description" content="IT Systems Engineer, DevOps, and Workflow Automation. Portfolio, Projects, and Experience.">
+  <meta name="twitter:image" content="https://bwgabor.github.io/assets/img/og-image.png">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateCreated": "2025-01-01",
+  "dateModified": "2026-07-02",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Gábor Sziebert",
+    "url": "https://bwgabor.github.io",
+    "jobTitle": "DevOps Engineer",
+    "description": "IT Systems Engineer, DevOps, and Workflow Automation specialist.",
+    "sameAs": [
+      "https://www.linkedin.com/in/gabor-sziebert/",
+      "https://github.com/bwgabor"
+    ]
+  }
+}
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W76F35N6G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4W76F35N6G');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xg81blo0xu");
+  </script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="navbar-brand nav-logo" href="#top"><h1>Gábor Sziebert</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav nav-links ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-text">&copy; 2026 Gabor Sziebert</p>
+      <div class="footer-links">
+        <a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/gabor-sziebert/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:gabor.sziebert@gmail.com">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const collapseEl = document.querySelector('.navbar-collapse');
+        const collapse = bootstrap.Collapse.getInstance(collapseEl);
+        if (collapse) collapse.hide();
+      });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="github.com"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'github_click', { event_category: 'engagement', event_label: el.href });
+        });
+      });
+      document.querySelectorAll('.project-card').forEach(function (el) {
+        el.addEventListener('click', function () {
+          const projectName = el.querySelector('.project-name')?.textContent?.trim() || 'unknown_project';
+          gtag('event', 'project_card_click', { event_category: 'engagement', event_label: projectName });
+        });
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'contact_click', { event_category: 'engagement', event_label: el.href });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

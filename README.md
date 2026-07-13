@@ -14,8 +14,11 @@ Personal portfolio site built with Bootstrap 5 and hosted on GitHub Pages.
 
 ## 🛠️ Technologies
 
-- [Bootstrap 5.3](https://getbootstrap.com/) – CSS framework
+- [Eleventy (11ty)](https://www.11ty.dev/) – Static site generator
+- [Nunjucks](https://mozilla.github.io/nunjucks/) – Templating engine
+- [GitHub Actions](https://github.com/features/actions) – CI/CD, automated build & deploy
 - [GitHub Pages](https://pages.github.com/) – Static hosting
+- [Bootstrap 5.3](https://getbootstrap.com/) – CSS framework
 - HTML5, CSS3, Vanilla JS
 
 ---
@@ -25,37 +28,32 @@ Personal portfolio site built with Bootstrap 5 and hosted on GitHub Pages.
 ```bash
 git clone https://github.com/bwgabor/bwgabor.github.io.git
 cd bwgabor.github.io
-# Open index.html in your browser — no build step needed
-open index.html        # macOS
-xdg-open index.html    # Linux
-start index.html       # Windows
+npm install
+npm run dev     # local dev server with live reload
+npm run build   # production build into _site/
 ```
 
 ---
 
 ## 📁 Project structure
 
-```
+```bash
 bwgabor.github.io/
-├── index.html # Main portfolio page
-├── assets/
-│   ├── css/
-│   │   ├── bootstrap.min.css
-│   │   └── style.css # Custom overrides on top of Bootstrap
-│   ├── js/
-│   │   ├── bootstrap.bundle.js
-│   │   └── main.js # Project load (later)
-│   ├── fonts/
-│   │   ├── instrument-serif-v5-latin-italic.woff2
-│   │   ├── instrument-serif-v5-latin-regular.woff2
-│   │   ├── inter-v20-latin-300.woff2
-│   │   ├── inter-v20-latin-700.woff2
-│   │   └── inter-v20-latin-regular.woff2
-│   └── img/
-│       └── screenshot.png
+├── src/
+│ ├── _data/ # Global data files (JSON/JS)
+│ ├── _includes/ # Nunjucks layouts and partials
+│ ├── assets/ # Images, fonts
+│ ├── css/ # Stylesheets
+│ ├── js/ # JavaScript files
+│ └── index.njk # Main page template
+├── _site/ # Build output (git-ignored)
+├── .github/
+│ └── workflows/
+│   └── deploy.yml # CI/CD: build + deploy to GitHub Pages
+├── .eleventy.js # Eleventy configuration
+├── package.json
 ├── CHANGELOG.md
-└── .github/
-    └── workflows/ # CI/CD (later)
+└── README.md
 ```
 
 

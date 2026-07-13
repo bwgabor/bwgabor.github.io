@@ -4,6 +4,19 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-07-13
+
+### Added
+- Eleventy (11ty) SSG setup with `.eleventy.js` configuration
+- Nunjucks templating: `_includes/base.njk` layout, `_includes/` partials
+- Passthrough copy: `assets/` directory copied to build output
+- npm scripts: `dev` (live reload via BrowserSync), `build` (static output)
+- GitHub Actions workflow: push to `main` triggers an Eleventy build, output (`_site/`) deployed to GitHub Pages via `actions/deploy-pages`
+
+### Changed
+- `index.html` migrated to Nunjucks template (`src/index.njk`)
+- Project structure reorganised to SSG-compatible `src/`-based layout
+
 ## [1.1.0] - 2026-06-29
 
 ### Added

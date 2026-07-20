@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented here.
 
-## [Unreleased]
+## [2.1.0] - 2026-07-20
+
+### Added
+- `src/js/main.js`: extracted all inline JavaScript (dark mode toggle, navbar scroll behaviour)
+- `src/js/analytics.js`: extracted GA4 / Clarity analytics scripts from `<head>`
+- `src/scss/` partial structure: `_variables`, `_base`, `_layout`, `_components`, `_nav`
+- `sass` npm package added as dev dependency
+- `npm run scss` script: compiles `src/scss/main.scss` → `src/css/main.css`
+- `npm run build` updated to run SCSS compilation before Eleventy build
+- Bootstrap 5 npm package added; imported via SCSS
+
+### Changed
+- All inline `<script>` blocks removed from Nunjucks templates
+- `base.njk` references external `src/js/main.js` with `defer`
+- Bootstrap CDN `<link>` replaced with SCSS-compiled local stylesheet
+- Hero, projects, about, footer sections migrated to Bootstrap grid classes
 
 ## [2.0.0] - 2026-07-13
 

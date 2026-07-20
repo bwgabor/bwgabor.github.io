@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @11ty/eleventy",
+    "scss": "sass src/scss/main.scss src/css/main.css",
+    "scss:watch": "sass --watch src/scss:src/css",
+    "build": "npm run scss && npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve",
     "clean": "rimraf _site"
   },
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/bwgabor/bwgabor.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "rimraf": "^6.1.3"
+    "rimraf": "^6.1.3",
+    "sass": "^1.101.0"
   }
 }

@@ -1,7 +1,10 @@
+// Bootstrap importálása az npm csomagból
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 // main.scss
 
-@use 'variables';
-@use 'base';
-@use 'layout';
-@use 'components';
-@use 'nav';
+@import 'variables';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'nav';

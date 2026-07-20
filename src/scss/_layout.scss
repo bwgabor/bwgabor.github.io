@@ -1,0 +1,155 @@
+// _layout.scss
+
+// HERO
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 54ch;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+// DIVIDER
+.section-divider {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+// SECTION HEADER
+.section-header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1.15;
+}
+
+// PROJECTS SECTION STRUCTURE
+#projects {
+  scroll-margin-top: 68px;
+}
+
+.projects-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+// ABOUT SECTION STRUCTURE
+#about {
+  scroll-margin-top: 68px;
+}
+
+.about-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  scroll-margin-top: 68px;
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.about-body {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.about-body p + p {
+  margin-top: 1rem;
+}
+
+// FOOTER STRUCTURE
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+// RESPONSIVE (hero rész)
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+}

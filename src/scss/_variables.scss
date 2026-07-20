@@ -1,0 +1,50 @@
+// _variables.scss
+
+// Fonts
+:root {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+// Light mode tokens
+:root,
+[data-bs-theme="light"] {
+  --color-bg: #f8f7f4;
+  --color-surface: #ffffff;
+  --color-border: rgba(30, 25, 15, 0.10);
+  --color-text: #1e190f;
+  --color-text-muted: #6b6860;
+  --color-accent: #1a5c5f;
+  --color-accent-hover: #134749;
+  --color-accent-light: #e6f0f0;
+  --color-tag-bg: #eef4f4;
+  --color-tag-text: #1a5c5f;
+  --color-project-icon-bg: #eef4f4;
+  --color-project-icon: #1a5c5f;
+}
+
+// Dark mode tokens
+[data-bs-theme="dark"] {
+  --color-bg: #171614;
+  --color-surface: #1c1b19;
+  --color-border: rgba(205, 204, 202, 0.10);
+  --color-text: #cdccca;
+  --color-text-muted: #797876;
+  --color-accent: #01696f;
+  --color-accent-hover: #134749;
+  --color-accent-light: #e6f0f0;
+  --color-tag-bg: #3d3a35;
+  --color-tag-text: #cdccca;
+  --color-project-icon-bg: #3d3a35;
+  --color-project-icon: #cdccca;
+}
+
+// Spacing & shape tokens
+:root {
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --shadow-card: 0 1px 3px rgba(30, 25, 15, 0.06), 0 8px 24px rgba(30, 25, 15, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(30, 25, 15, 0.08), 0 16px 40px rgba(30, 25, 15, 0.10);
+}

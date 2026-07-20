@@ -6,114 +6,136 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
 {% block content %}
 
   <!-- HERO -->
-  <header class="hero">
-    <p class="hero-eyebrow">IT Systems Engineer · DevOps</p>
-    <h1 class="hero-title">Bringing <em>clarity</em><br>to complex systems.</h1>
-    <p class="hero-sub">
-      I design infrastructure and workflows that reduce operational friction. My focus is observability, automation, and clear
-      knowledge flows, so teams spend less time fighting the system and more time shipping.<br>
-      Open to new opportunities in infrastructure, DevOps, or hybrid IT roles.
-    </p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary-custom">
-        <i class="bi bi-grid-1x2"></i> View Projects
-      </a>
-      <a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer" class="btn-ghost-custom">
-        <i class="bi bi-github"></i> GitHub Profile
-      </a>
+  <header id="hero" class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="hero-eyebrow">IT Systems Engineer · DevOps</p>
+          <h1 class="hero-title">Bringing <em>clarity</em><br>to complex systems.</h1>
+          <p class="hero-sub">
+            I design infrastructure and workflows that reduce operational friction. My focus is observability, automation, and clear
+            knowledge flows, so teams spend less time fighting the system and more time shipping.<br>
+            Open to new opportunities in infrastructure, DevOps, or hybrid IT roles.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+            <a href="#projects" class="btn-primary-custom d-flex justify-content-center align-items-center">
+              <i class="bi bi-grid-1x2 me-1"></i> View Projects
+            </a>
+            <a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer" class="btn-ghost-custom d-flex justify-content-center align-items-center">
+              <i class="bi bi-github me-1"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <hr class="section-divider">
 
-  <section id="projects" aria-labelledby="projects-heading">
-    <div class="section-header">
-      <p class="section-label">Portfolio</p>
-      <h2 class="section-title" id="projects-heading">Selected Projects</h2>
-    </div>
-    <div class="projects-grid">
-      <a href="https://github.com/bwgabor/monitoring-demo" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-icon"><i class="bi bi-activity"></i></div>
-        <p class="project-name">Monitoring Demo</p>
-        <p class="project-desc">
-          Full local observability stack using Infrastructure as Code. Runs Prometheus, Loki,
-          Grafana, and Grafana Alloy across four virtual machines with automated provisioning,
-          pre-configured dashboards, and alert rules.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Vagrant</span>
-          <span class="tech-tag">Prometheus</span>
-          <span class="tech-tag">Grafana</span>
-          <span class="tech-tag">Loki</span>
-          <span class="tech-tag">Grafana Alloy</span>
+  <section id="projects" class="py-5" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="section-label">Portfolio</p>
+          <h2 class="section-title" id="projects-heading">Selected Projects</h2>
         </div>
-        <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
-      </a>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <a href="https://github.com/bwgabor/monitoring-demo" target="_blank" rel="noopener noreferrer" class="project-card h-100">
+            <div class="project-icon"><i class="bi bi-activity"></i></div>
+            <p class="project-name">Monitoring Demo</p>
+            <p class="project-desc">
+              Full local observability stack using Infrastructure as Code. Runs Prometheus, Loki,
+              Grafana, and Grafana Alloy across four virtual machines with automated provisioning,
+              pre-configured dashboards, and alert rules.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Vagrant</span>
+              <span class="tech-tag">Prometheus</span>
+              <span class="tech-tag">Grafana</span>
+              <span class="tech-tag">Loki</span>
+              <span class="tech-tag">Grafana Alloy</span>
+            </div>
+            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
 
-      <a href="https://github.com/bwgabor/docker-cicd-demo" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-icon"><i class="bi bi-box-seam"></i></div>
-        <p class="project-name">Docker CI/CD Pipeline Demo</p>
-        <p class="project-desc">
-          A containerised CI/CD pipeline demonstration built with Docker. Showcases automated
-          build, test, and deployment workflows in a reproducible local environment.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">CI/CD</span>
-          <span class="tech-tag">Jenkins</span>
-          <span class="tech-tag">Gitea</span>
-          <span class="tech-tag">Nginx Proxy Manager</span>
+        <div class="col">
+          <a href="https://github.com/bwgabor/docker-cicd-demo" target="_blank" rel="noopener noreferrer" class="project-card h-100">
+            <div class="project-icon"><i class="bi bi-box-seam"></i></div>
+            <p class="project-name">Docker CI/CD Pipeline Demo</p>
+            <p class="project-desc">
+              A containerised CI/CD pipeline demonstration built with Docker. Showcases automated
+              build, test, and deployment workflows in a reproducible local environment.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">CI/CD</span>
+              <span class="tech-tag">Jenkins</span>
+              <span class="tech-tag">Gitea</span>
+              <span class="tech-tag">Nginx Proxy Manager</span>
+            </div>
+            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+          </a>
         </div>
-        <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
-      </a>
 
-      <a href="https://github.com/bwgabor/agent-prompt-framework" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-icon"><i class="bi bi-terminal"></i></div>
-        <p class="project-name">Agent Prompt Framework</p>
-        <p class="project-desc">
-          A Markdown-first framework for structuring AI agent personas, modes, output templates,
-          and shared instruction blocks with a consistent YAML front matter schema.
-          Designed for composable, reusable prompt engineering.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Markdown</span>
-          <span class="tech-tag">Prompt Engineering</span>
-          <span class="tech-tag">AI Agents</span>
+        <div class="col">
+          <a href="https://github.com/bwgabor/agent-prompt-framework" target="_blank" rel="noopener noreferrer" class="project-card h-100">
+            <div class="project-icon"><i class="bi bi-terminal"></i></div>
+            <p class="project-name">Agent Prompt Framework</p>
+            <p class="project-desc">
+              A Markdown-first framework for structuring AI agent personas, modes, output templates,
+              and shared instruction blocks with a consistent YAML front matter schema.
+              Designed for composable, reusable prompt engineering.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Markdown</span>
+              <span class="tech-tag">Prompt Engineering</span>
+              <span class="tech-tag">AI Agents</span>
+            </div>
+            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+          </a>
         </div>
-        <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
-      </a>
+      </div>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <div class="container">
+    <hr class="section-divider">
+  </div>
 
-  <section id="about" aria-labelledby="about-heading">
-    <div class="section-header">
-      <p class="section-label">Background</p>
-      <h2 class="section-title" id="about-heading">About Me</h2>
-    </div>
-    <div class="about-section">
-      <div class="about-body">
-        <p>
-          I'm an IT Systems Engineer with a passion for designing reliable systems, improving workflows and making technology
-          easier to use. My background spans infrastructure, virtualization, Linux and automation, but what motivates me most is
-          finding practical ways to reduce complexity and help people work more effectively.
-        </p>
-        <p>
-          I've always enjoyed building systems, from designing user interfaces as a teenager to creating maintainable IT solutions
-          today. I believe the best technology isn't the most complex, but the one that removes friction, supports quality work
-          and remains easy to understand, maintain and improve over time.
-        </p>
+  <section id="about" class="py-5" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="section-label">Background</p>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+        </div>
       </div>
-      <div>
-        <ul class="skills-list">
-          <li class="skill-item"><i class="bi bi-check2"></i>Core infrastructure (Linux, Containerization, Networking, Virtualization)</li>
-          <li class="skill-item"><i class="bi bi-check2"></i>Automation & Delivery (Git, CI/CD, Infrastructure as Code)</li>
-          <li class="skill-item"><i class="bi bi-check2"></i>Monitoring & Operations (Monitoring, Grafana, Logging, Troubleshooting)</li>
-          <li class="skill-item"><i class="bi bi-check2"></i>AI prompt engineering (Markdown)</li>
-          <li class="skill-item"><i class="bi bi-check2"></i>Workflow (Notion, Process Design, Documentation, Workflow Optimization)</li>
-          <li class="skill-item"><i class="bi bi-check2"></i>Design (Figma, UI Design, UX Thinking)</li>
-        </ul>
+      <div class="row">
+        <div class="col-lg-6 about-body">
+          <p>
+            I'm an IT Systems Engineer with a passion for designing reliable systems, improving workflows and making technology
+            easier to use. My background spans infrastructure, virtualization, Linux and automation, but what motivates me most is
+            finding practical ways to reduce complexity and help people work more effectively.
+          </p>
+          <p>
+            I've always enjoyed building systems, from designing user interfaces as a teenager to creating maintainable IT solutions
+            today. I believe the best technology isn't the most complex, but the one that removes friction, supports quality work
+            and remains easy to understand, maintain and improve over time.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <ul class="skills-list p-0">
+            <li class="skill-item"><i class="bi bi-check2"></i>Core infrastructure (Linux, Containerization, Networking, Virtualization)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Automation & Delivery (Git, CI/CD, Infrastructure as Code)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Monitoring & Operations (Monitoring, Grafana, Logging, Troubleshooting)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>AI prompt engineering (Markdown)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Workflow (Notion, Process Design, Documentation, Workflow Optimization)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Design (Figma, UI Design, UX Thinking)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

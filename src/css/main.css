@@ -11960,7 +11960,6 @@ body {
 }
 
 .hero {
-  max-width: 960px;
   margin: 0 auto;
   padding: 5rem 1.5rem 4rem;
 }
@@ -12003,17 +12002,10 @@ body {
 }
 
 .section-divider {
-  max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
   border: none;
   border-top: 1px solid var(--color-border);
-}
-
-.section-header {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 3.5rem 1.5rem 2rem;
 }
 
 .section-label {
@@ -12037,27 +12029,7 @@ body {
   scroll-margin-top: 68px;
 }
 
-.projects-grid {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem 4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
-  gap: 1.25rem;
-}
-
 #about {
-  scroll-margin-top: 68px;
-}
-
-.about-section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem 5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
   scroll-margin-top: 68px;
 }
 
@@ -12080,17 +12052,6 @@ body {
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: 2rem 0;
-}
-
-.footer-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .footer-text {
@@ -12275,7 +12236,6 @@ body {
 }
 
 .nav-inner {
-  max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;

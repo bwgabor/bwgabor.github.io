@@ -61,15 +61,19 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a class="navbar-brand nav-logo" href="#top"><h1>Gábor Sziebert</h1></a>
+      <a class="navbar-brand nav-logo" href="/#top"><h1>Gábor Sziebert</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav nav-links ms-auto mb-2 mb-md-0">
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          {# <li class="nav-item">
+            <!-- Nunjucks feltétel az active class-hoz -->
+            <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="/projects/">Projects</a>
+          </li> #}
+          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </div>

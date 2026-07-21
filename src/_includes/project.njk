@@ -1,0 +1,49 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <section class="py-5">
+    <div class="container">
+
+      {# Back link #}
+      <a href="/projects/" class="btn-ghost-custom d-inline-flex align-items-center mb-4">
+        <i class="bi bi-arrow-left me-1"></i> Back to Projects
+      </a>
+
+      {# Header #}
+      <p class="section-label">Project Detail</p>
+      <h1 class="hero-title">{{ title }}</h1>
+
+      {# Description #}
+      {% if description %}
+        <p class="hero-sub mb-4">{{ description }}</p>
+      {% endif %}
+
+      {# Tech stack #}
+      {% if tech %}
+        <div class="tech-tags mb-4">
+          {% for item in tech %}
+            <span class="tech-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {# GitHub link #}
+      {% if github %}
+        <a href="{{ github }}" target="_blank" rel="noopener noreferrer"
+           class="btn-primary-custom d-inline-flex align-items-center mb-5">
+          <i class="bi bi-github me-1"></i> View on GitHub
+        </a>
+      {% endif %}
+
+      <hr class="section-divider">
+
+      {# Markdown body #}
+      <div class="about-body mt-4">
+        {{ content | safe }}
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

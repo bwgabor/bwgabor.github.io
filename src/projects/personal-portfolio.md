@@ -1,9 +1,10 @@
 ---
-title: Portfólió weboldal 11ty-vel
-description: TODO — statikus portfólió átalakítása 11ty SSG-re.
+title: Personal portfolio site with 11ty
+description: Personal portfolio site built with Bootstrap 5 and hosted on GitHub Pages.
 date: 2026-07-01
 github: https://github.com/bwgabor/bwgabor.github.io
 tech: [Eleventy, Nunjucks, GitHub Pages]
+icon: display
 ---
 
 TODO: részletes leírás.

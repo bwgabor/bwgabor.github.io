@@ -40,7 +40,28 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
           <h2 class="section-title" id="projects-heading">Selected Projects</h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <!-- Dynamically rendering project cards from the projects collection -->
+        {% for project in collections.projects %}
+        {% if not project.data.draft %}
+        <div class="col">
+          <a href="{{ project.url }}" class="project-card h-100">
+            <!-- Icon could be made dynamic later via frontmatter -->
+            <div class="project-icon"><i class="bi bi-{{ project.data.icon }}"></i></div>
+            <p class="project-name">{{ project.data.title }}</p>
+            <p class="project-desc">{{ project.data.description }}</p>
+            {% if project.data.technologies %}
+            <div class="tech-tags">
+              {% for tech in project.data.technologies %}
+              <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <span class="project-link">View details <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        {% endif %}
+        {% endfor %}
         <div class="col">
           <a href="https://github.com/bwgabor/monitoring-demo" target="_blank" rel="noopener noreferrer" class="project-card h-100">
             <div class="project-icon"><i class="bi bi-activity"></i></div>

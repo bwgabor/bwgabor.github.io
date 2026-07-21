@@ -1,0 +1,44 @@
+---
+title: "Projects · Gábor Sziebert"
+permalink: /projects/
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% extends "base.njk" %}
+
+{% block content %}
+  <section id="projects-list" class="py-5" aria-labelledby="projects-list-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="section-label">Portfolio</p>
+          <h2 class="section-title" id="projects-list-heading">All Projects</h2>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        {% for project in collections.projects %}
+        {% if not project.data.draft %}
+        <div class="col">
+          <a href="{{ project.url }}" class="project-card h-100">
+            <div class="project-icon"><i class="bi bi-{{ project.data.icon }}"></i></div>
+            <p class="project-name">{{ project.data.title }}</p>
+            <p class="project-desc">{{ project.data.description }}</p>
+            {% if project.data.technologies %}
+            <div class="tech-tags">
+              {% for tech in project.data.technologies %}
+              <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <span class="project-link">View details <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

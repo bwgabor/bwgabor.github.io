@@ -4,7 +4,7 @@ description: Vagrant + Docker + Jenkins alapú CI/CD pipeline bemutató projekt.
 draft: true
 date: 2026-06-01
 github: https://github.com/bwgabor/docker-cicd-demo
-tech: [Docker, Jenkins, Vagrant]
+technologies: [Docker, Jenkins, Vagrant]
 icon: terminal
 ---
 

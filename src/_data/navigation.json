@@ -1,0 +1,5 @@
+[
+  { "label": "Projects", "url": "#projects" },
+  { "label": "About", "url": "/#about" },
+  { "label": "GitHub", "url": "https://github.com/bwgabor", "external": true }
+]

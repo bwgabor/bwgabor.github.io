@@ -1,0 +1,20 @@
+[
+  {
+    "label": "GitHub",
+    "url": "https://github.com/bwgabor",
+    "icon": "bi bi-github",
+    "external": true
+  },
+  {
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/gabor-sziebert/",
+    "icon": "bi bi-linkedin",
+    "external": true
+  },
+  {
+    "label": "Contact",
+    "url": "mailto:gabor.sziebert@gmail.com",
+    "icon": "bi bi-envelope",
+    "external": false
+  }
+]

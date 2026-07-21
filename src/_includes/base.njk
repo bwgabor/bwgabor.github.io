@@ -68,17 +68,21 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav nav-links ms-auto mb-2 mb-md-0">
-          {# <li class="nav-item">
-            <!-- Nunjucks feltétel az active class-hoz -->
-            <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="/projects/">Projects</a>
-          </li> #}
-          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          {% for item in navigation %}
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == item.url %}active{% endif %}" 
+                href="{{ item.url }}"
+                {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                {{ item.label }}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
   </nav>
+
+  
 
   {% block content %}{% endblock %}
 
@@ -87,15 +91,11 @@
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
         <p class="mb-0 footer-text">&copy; 2026 Gabor Sziebert</p>
         <div class="footer-links d-flex gap-3">
-          <a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-github"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/gabor-sziebert/" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-linkedin"></i> LinkedIn
-          </a>
-          <a href="mailto:gabor.sziebert@gmail.com">
-            <i class="bi bi-envelope"></i> Contact
-          </a>
+          {% for item in footer %}
+            <a href="{{ item.url }}" {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              <i class="{{ item.icon }}"></i> {{ item.label }}
+            </a>
+          {% endfor %}
         </div>
       </div>
     </div>

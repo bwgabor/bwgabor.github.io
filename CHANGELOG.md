@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented here.
 
+## [2.2.0] - 2026-07-21
+
+### Added
+- `src/projects/` Eleventy collection: Markdown-based project detail pages
+- `src/projects/projects.json`: collection tag configuration
+- `src/_includes/project.njk`: project detail page layout template
+- `src/projects/index.njk`: projects listing page (auto-generated from collection)
+- `src/projects/personal-portfolio.md`: first project detail entry
+- `src/projects/docker-cicd-demo.md`: second project detail entry
+
+### Changed
+- `src/index.njk`: Projects section cards link to individual detail pages
+- `src/_data/navigation.json` and `src/_data/footer.json`: nav and footer links
+  replaced with data-driven JSON configuration (rendered dynamically via base.njk)
+
 ## [2.1.0] - 2026-07-20
 
 ### Added

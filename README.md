@@ -19,6 +19,7 @@ Personal portfolio site built with Bootstrap 5 and hosted on GitHub Pages.
 - [GitHub Actions](https://github.com/features/actions) – CI/CD, automated build & deploy
 - [GitHub Pages](https://pages.github.com/) – Static hosting
 - [Bootstrap 5.3](https://getbootstrap.com/) – CSS framework
+- [Sass/SCSS](https://sass-lang.com/) – CSS preprocessor, compiled to `src/css/main.css`
 - HTML5, CSS3, Vanilla JS
 
 ---
@@ -37,20 +38,23 @@ npm run build   # production build into _site/
 
 ## 📁 Project structure
 
-```bash
+```txt
 bwgabor.github.io/
-├── src/
-│ ├── _data/ # Global data files (JSON/JS)
-│ ├── _includes/ # Nunjucks layouts and partials
-│ ├── assets/ # Images, fonts
-│ ├── css/ # Stylesheets
-│ ├── js/ # JavaScript files
-│ └── index.njk # Main page template
-├── _site/ # Build output (git-ignored)
+├── _site/            # Build output (git-ignored)
 ├── .github/
 │ └── workflows/
-│   └── deploy.yml # CI/CD: build + deploy to GitHub Pages
-├── .eleventy.js # Eleventy configuration
+│   └── deploy.yml    # CI/CD: build + deploy to GitHub Pages
+├── assets/           # Images, fonts, css, js
+├── src/
+│ ├── _data/          # Global data files – navigation, footer (JSON)
+│ ├── _includes/      # Nunjucks layouts and partials
+│ ├── assets/         # Images, fonts
+│ ├── css/            # Compiled CSS output
+│ ├── js/             # JavaScript files
+│ ├── scss/           # SCSS source files (partials: _variables, _base, _layout, _components, _nav)
+│ ├── projects/       # Markdown project detail pages + collection config
+│ └── index.njk       # Main page template
+├── .eleventy.js      # Eleventy configuration
 ├── package.json
 ├── CHANGELOG.md
 └── README.md
@@ -61,7 +65,7 @@ bwgabor.github.io/
 
 | Category      | Goal  | Result     | Status  |
 | -------------- | ---- | ---------- | ------- |
-| Performance    | ≥ 90 | 90         | ✅     |
+| Performance    | ≥ 90 | 92         | ✅     |
 | Accessibility  | ≥ 90 | 98         | ✅     |
 | Best Practices | ≥ 90 | 100        | ✅     |
 | SEO            | ≥ 90 | 100        | ✅     |

@@ -1,5 +1,10 @@
 ---
-title: "Gábor Sziebert · Portfolio, Projects, and Experience"
+title: "Sziebert Gábor | IT rendszermérnök és DevOps portfólió"
+description: "Sziebert Gábor IT rendszermérnök és DevOps portfóliója: Linux, automatizálás, CI/CD, Docker, monitoring, observability és dokumentációs projektek."
+lang: hu
+permalink: /
+canonicalUrl: "https://bwgabor.github.io/"
+ogImage: "https://bwgabor.github.io/assets/img/og-image.png"
 ---
 {% extends "base.njk" %}
 
@@ -10,19 +15,18 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <p class="hero-eyebrow">IT Systems Engineer · DevOps</p>
-          <h1 class="hero-title">Bringing <em>clarity</em><br>to complex systems.</h1>
+          <p class="hero-eyebrow">IT rendszermérnök · DevOps</p>
+          <h1 class="hero-title">Bringing <em>clarity</em><br> to complex systems</h1>
           <p class="hero-sub">
-            I design infrastructure and workflows that reduce operational friction. My focus is observability, automation, and clear
-            knowledge flows, so teams spend less time fighting the system and more time shipping.<br>
-            Open to new opportunities in infrastructure, DevOps, or hybrid IT roles.
+            Linux-alapú infrastruktúrák, automatizált munkafolyamatok, CI/CD és observability megoldások tervezésével foglalkozom.<br>
+            Nyitott vagyok IT rendszermérnöki, DevOps és infrastruktúra-üzemeltetési lehetőségekre.
           </p>
           <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
             <a href="#projects" class="btn-primary-custom d-flex justify-content-center align-items-center">
-              <i class="bi bi-grid-1x2 me-1"></i> View Projects
+              <i class="bi bi-grid-1x2 me-1"></i> Projektek megtekintése
             </a>
             <a href="https://github.com/bwgabor" target="_blank" rel="noopener noreferrer" class="btn-ghost-custom d-flex justify-content-center align-items-center">
-              <i class="bi bi-github me-1"></i> GitHub Profile
+              <i class="bi bi-github me-1"></i> GitHub profil
             </a>
           </div>
         </div>
@@ -36,8 +40,8 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="section-label">Portfolio</p>
-          <h2 class="section-title" id="projects-heading">Selected Projects</h2>
+          <p class="section-label">Portfólió</p>
+          <h2 class="section-title" id="projects-heading">Válogatott projektek</h2>
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
@@ -49,7 +53,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
             <!-- Icon could be made dynamic later via frontmatter -->
             <div class="project-icon"><i class="bi bi-{{ project.data.icon }}"></i></div>
             <p class="project-name">{{ project.data.title }}</p>
-            <p class="project-desc">{{ project.data.description }}</p>
+            <p class="project-desc">{{ project.data.short_description }}</p>
             {% if project.data.technologies %}
             <div class="tech-tags">
               {% for tech in project.data.technologies %}
@@ -57,7 +61,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
               {% endfor %}
             </div>
             {% endif %}
-            <span class="project-link">View details <i class="bi bi-arrow-right"></i></span>
+            <span class="project-link">Projekt megnyitása <i class="bi bi-arrow-right"></i></span>
           </a>
         </div>
         {% endif %}
@@ -67,9 +71,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
             <div class="project-icon"><i class="bi bi-activity"></i></div>
             <p class="project-name">Monitoring Demo</p>
             <p class="project-desc">
-              Full local observability stack using Infrastructure as Code. Runs Prometheus, Loki,
-              Grafana, and Grafana Alloy across four virtual machines with automated provisioning,
-              pre-configured dashboards, and alert rules.
+              Reprodukálható, több virtuális gépből álló monitoring környezet Linux-alapú infrastruktúrához. A stack metrikák, naplók, dashboardok és riasztások közös kezelését mutatja be.
             </p>
             <div class="tech-tags">
               <span class="tech-tag">Vagrant</span>
@@ -78,7 +80,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
               <span class="tech-tag">Loki</span>
               <span class="tech-tag">Grafana Alloy</span>
             </div>
-            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+            <span class="project-link">GitHub repository <i class="bi bi-arrow-right"></i></span>
           </a>
         </div>
 
@@ -87,8 +89,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
             <div class="project-icon"><i class="bi bi-box-seam"></i></div>
             <p class="project-name">Docker CI/CD Pipeline Demo</p>
             <p class="project-desc">
-              A containerised CI/CD pipeline demonstration built with Docker. Showcases automated
-              build, test, and deployment workflows in a reproducible local environment.
+              Lokálisan futó, konténerizált CI/CD környezet automatizált build- és deployment-folyamatokhoz. A projekt egy reprodukálható fejlesztési és szállítási workflow felépítését mutatja be
             </p>
             <div class="tech-tags">
               <span class="tech-tag">Docker</span>
@@ -97,7 +98,7 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
               <span class="tech-tag">Gitea</span>
               <span class="tech-tag">Nginx Proxy Manager</span>
             </div>
-            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+            <span class="project-link">GitHub repository <i class="bi bi-arrow-right"></i></span>
           </a>
         </div>
 
@@ -106,16 +107,14 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
             <div class="project-icon"><i class="bi bi-terminal"></i></div>
             <p class="project-name">Agent Prompt Framework</p>
             <p class="project-desc">
-              A Markdown-first framework for structuring AI agent personas, modes, output templates,
-              and shared instruction blocks with a consistent YAML front matter schema.
-              Designed for composable, reusable prompt engineering.
+              Markdown-alapú sémarendszer AI agent promptok strukturált felépítéséhez. Egységes YAML front matter konvenciókkal definiálja a komponenstípusokat: persona, mode, output-template, shared-block és skill.
             </p>
             <div class="tech-tags">
               <span class="tech-tag">Markdown</span>
               <span class="tech-tag">Prompt Engineering</span>
               <span class="tech-tag">AI Agents</span>
             </div>
-            <span class="project-link">View on GitHub <i class="bi bi-arrow-right"></i></span>
+            <span class="project-link">GitHub repository <i class="bi bi-arrow-right"></i></span>
           </a>
         </div>
       </div>
@@ -130,31 +129,31 @@ title: "Gábor Sziebert · Portfolio, Projects, and Experience"
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="section-label">Background</p>
-          <h2 class="section-title" id="about-heading">About Me</h2>
+          <p class="section-label">Háttér</p>
+          <h2 class="section-title" id="about-heading">Bemutatkozás</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6 about-body">
           <p>
-            I'm an IT Systems Engineer with a passion for designing reliable systems, improving workflows and making technology
-            easier to use. My background spans infrastructure, virtualization, Linux and automation, but what motivates me most is
-            finding practical ways to reduce complexity and help people work more effectively.
+            IT rendszermérnöki és DevOps szemlélettel közelítek az infrastruktúrához. Linux-alapú rendszerek, automatizált üzemeltetési feladatok, CI/CD folyamatok, monitoring és observability megoldások érdekelnek.
           </p>
           <p>
-            I've always enjoyed building systems, from designing user interfaces as a teenager to creating maintainable IT solutions
-            today. I believe the best technology isn't the most complex, but the one that removes friction, supports quality work
-            and remains easy to understand, maintain and improve over time.
+            Számomra egy jól megtervezett rendszer nemcsak működik: átlátható, dokumentált, ismételhetően telepíthető, és hibahelyzetben is vizsgálható. A projektjeimben ezért a technikai megvalósítás mellett a karbantarthatóságra és a használható dokumentációra is figyelek.
           </p>
+          <p>
+          Korábbi tapasztalataim a workflow-k, információs struktúrák és felhasználói nézőpont fontosságára is megtanítottak. Ezt a rendszermérnöki munkában is hasznos szemléletnek tartom: a jó technikai megoldásnak az azt üzemeltető ember számára is érthetőnek kell lennie.
+        </p>
         </div>
         <div class="col-lg-6">
           <ul class="skills-list p-0">
-            <li class="skill-item"><i class="bi bi-check2"></i>Core infrastructure (Linux, Containerization, Networking, Virtualization)</li>
-            <li class="skill-item"><i class="bi bi-check2"></i>Automation & Delivery (Git, CI/CD, Infrastructure as Code)</li>
-            <li class="skill-item"><i class="bi bi-check2"></i>Monitoring & Operations (Monitoring, Grafana, Logging, Troubleshooting)</li>
-            <li class="skill-item"><i class="bi bi-check2"></i>AI prompt engineering (Markdown)</li>
-            <li class="skill-item"><i class="bi bi-check2"></i>Workflow (Notion, Process Design, Documentation, Workflow Optimization)</li>
-            <li class="skill-item"><i class="bi bi-check2"></i>Design (Figma, UI Design, UX Thinking)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Infrastruktúra (Linux · hálózatok · virtualizáció · Docker · Nginx)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Automatizálás (Bash · PowerShell · Python · Ansible · Infrastructure as Code)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>CI/CD és verziókezelés (Git · GitHub · Gitea · Jenkins · CI/CD)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Monitoring és observability (Prometheus · Grafana · Loki · Grafana Alloy · alerting)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Dokumentáció és workflow (Technical documentation · Notion · process design · workflow optimization)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>AI-assisted workflows (Prompt design · strukturált Markdown-dokumentáció · AI-eszközök tudatos használata)</li>
+            <li class="skill-item"><i class="bi bi-check2"></i>Tervezés (Figma · UI design · UX thinking)</li>
           </ul>
         </div>
       </div>

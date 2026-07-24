@@ -1,18 +1,18 @@
 [
   {
-    "label": "GitHub",
+    "label": "GitHub repository",
     "url": "https://github.com/bwgabor",
     "icon": "bi bi-github",
     "external": true
   },
   {
-    "label": "LinkedIn",
+    "label": "LinkedIn profil",
     "url": "https://www.linkedin.com/in/gabor-sziebert/",
     "icon": "bi bi-linkedin",
     "external": true
   },
   {
-    "label": "Contact",
+    "label": "E-mail írása",
     "url": "mailto:gabor.sziebert@gmail.com",
     "icon": "bi bi-envelope",
     "external": false

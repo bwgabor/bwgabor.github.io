@@ -1,4 +1,15 @@
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
+
 module.exports = function (eleventyConfig) {
+  const md = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(markdownItAttrs);
+
+  eleventyConfig.setLibrary('md', md);
+
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/assets');
@@ -14,4 +25,3 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
-

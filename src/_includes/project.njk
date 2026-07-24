@@ -6,12 +6,12 @@
     <div class="container">
 
       {# Back link #}
-      <a href="/projects/" class="btn-ghost-custom d-inline-flex align-items-center mb-4">
-        <i class="bi bi-arrow-left me-1"></i> Back to Projects
+      <a href="/" class="btn-ghost-custom d-inline-flex align-items-center mb-4">
+        <i class="bi bi-arrow-left me-1"></i> Vissza a főoldalra
       </a>
 
       {# Header #}
-      <p class="section-label">Project Detail</p>
+      <p class="section-label">Projekt részletei</p>
       <h1 class="hero-title">{{ title }}</h1>
 
       {# Description #}
@@ -32,14 +32,14 @@
       {% if github %}
         <a href="{{ github }}" target="_blank" rel="noopener noreferrer"
            class="btn-primary-custom d-inline-flex align-items-center mb-5">
-          <i class="bi bi-github me-1"></i> View on GitHub
+          <i class="bi bi-github me-1"></i> GitHub repository
         </a>
       {% endif %}
 
       <hr class="section-divider">
 
       {# Markdown body #}
-      <div class="about-body mt-4">
+      <div class="about-body mt-4 col-8">
         {{ content | safe }}
       </div>
 
